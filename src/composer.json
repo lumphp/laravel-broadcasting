@@ -1,11 +1,11 @@
 {
-    "name": "lumphp/laravel-broadcasting",
+    "name": "illuminate/broadcasting",
     "description": "The Illuminate Broadcasting package.",
     "license": "MIT",
     "homepage": "https://laravel.com",
     "support": {
-        "issues": "https://github.com/lumphp/laravel-broadcasting/issues",
-        "source": "https://github.com/lumphp/laravel-broadcasting"
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
     },
     "authors": [
         {
@@ -15,15 +15,18 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
-        "lumphp/laravel-contracts": "^8.0"
+        "ext-json": "*",
+        "psr/log": "^1.0",
+        "illuminate/bus": "^8.0",
+        "illuminate/collections": "^8.0",
+        "illuminate/contracts": "^8.0",
+        "illuminate/queue": "^8.0",
+        "illuminate/support": "^8.0"
     },
     "autoload": {
         "psr-4": {
-            "Illuminate\\Support\\": ""
-        },
-        "files": [
-            "helpers.php"
-        ]
+            "Illuminate\\Broadcasting\\": ""
+        }
     },
     "extra": {
         "branch-alias": {
@@ -31,7 +34,7 @@
         }
     },
     "suggest": {
-        "symfony/var-dumper": "Required to use the dump method (^5.1.4)."
+        "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^4.0|^5.0|^6.0)."
     },
     "config": {
         "sort-packages": true
